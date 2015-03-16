@@ -1,0 +1,50 @@
+
+class EnemyStrategy:
+    COMMON = 0
+    DEF_ONE = 1
+    DEF_TWIN = 2
+    POWERPLAY = 3
+    POWERPLAY_ONPUCK = 4
+
+class PlayerState:
+    DEFMAN_STATES = range(0,99)
+    DEFMAN_STAY = 0
+    DEFMAN_GODEF = 1
+    DEFMAN_DEFEND = 2
+    DEFMAN_PREVENT = 3
+    DEFMAN_TAKE_PUCK = 4
+    DEFMAN_HELP_OWNER = 5
+    DEFMAN_GODEF_PERMANENT = 6
+
+    PUCKMAN_STATES = range(100,199)
+    PUCKMAN_GONET = 100
+    PUCKMAN_GO_SIDE_POSITION = 101
+    PUCKMAN_GO_MID_POSITION = 102
+    PUCKMAN_GIVEPASS = 103
+    PUCKMAN_SWING = 104
+    PUCKMAN_STRIKE = 105
+    PUCKMAN_CANCEL_STRIKE = 106
+    PUCKMAN_TURN = 107
+    PUCKMAN_TURN_ANGLE = 108
+    PUCKMAN_GOBACK = 109
+    PUCKMAN_PANIC = 110
+    PUCKMAN_PASS_STRIKE = 111
+
+    FREE_STATES = range(200,299)
+    FREE_HELP = 200
+    FREE_TAKE_PUCK = 201
+    FREE_TAKE_PASS = 202
+    FREE_ATTACK_PUCK = 203
+    FREE_ATTACK_DEF = 204
+
+    REST_STATES = range(1000,1099)
+    GO_REST = 1000
+    REST = 1001
+    REST_DEF_READY = 1002
+    REST_ATK_READY = 1003
+    REST_FUNNY = 1004
+
+class PlayerTarget:
+        def __init__(self, x, y):
+            self.x = x
+            self.y = y
